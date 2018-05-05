@@ -1,6 +1,15 @@
-const express = require('express');
-const app = express();
+'use strict';
 
-app.get('/', (req, res) => res.send('Hello World!'));
+const expressApp = require('express')();
+const PORT = 8080;
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+let rootGetHandler = (req, res) => res.send('Success');
+let rootGetPath = '/';
+let appStartHandler = () => console.log(`App listening on port ${PORT}`);
+
+let appSetUp = app => {
+  app.get(rootGetPath, rootGetHandler);
+  app.listen(PORT, appStartHandler);
+};
+
+appSetUp(expressApp);
