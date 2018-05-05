@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/glez120/docker-node-poc/issues"
   },
-  "homepage": "https://github.com/glez120/docker-node-poc#readme"
+  "homepage": "https://github.com/glez120/docker-node-poc#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
